@@ -51,7 +51,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'], // email の入力値は users テーブルの email カラムで使われていない値
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
