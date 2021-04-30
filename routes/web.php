@@ -26,3 +26,7 @@ Route::post('/folders/create', 'App\Http\Controllers\FolderController@create');
 
 Route::get('/folders/{id}/tasks/create', 'App\Http\Controllers\TaskController@showCreateForm')->name('tasks.create');
 Route::post('/folders/{id}/tasks/create', 'App\Http\Controllers\TaskController@create');
+
+// added automatically by laravel/ui
+Auth::routes();// alias in app.php
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
