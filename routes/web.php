@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 ミドルウェアはリクエストの交通整理をする
 */
 Route::group(['middleware' => 'auth'], function() {
+    // == Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
     // requestURL, Controller@method -> view(blade file) or route name used in template
@@ -30,3 +31,6 @@ Route::group(['middleware' => 'auth'], function() {
 
 // added automatically by laravel/ui
 Auth::routes();// alias in app.php
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
