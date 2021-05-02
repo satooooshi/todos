@@ -19,7 +19,7 @@
               </div>
             @endif
             <form
-                action="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}"
+                action="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"
                 method="POST"
             >
               @csrf
@@ -31,7 +31,7 @@
               <div class="form-group">
                 <label for="status">状態</label>
                 <select name="status" id="status" class="form-control">
-                  @foreach(\App\Task::STATUS as $key => $val)
+                  @foreach(\App\Models\Task::STATUS as $key => $val)
                     <option
                         value="{{ $key }}"
                         {{ $key == old('status', $task->status) ? 'selected' : '' }}
