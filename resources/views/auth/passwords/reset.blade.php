@@ -11,7 +11,7 @@
               @csrf
               <div class="form-group">
                 <label for="email">メールアドレス</label>
-                <input type="text" class="form-control" id="email" name="email" />
+                <input type="text" class="form-control" id="email" name="email" value="{{ $email }}" />
               </div>
               <div class="form-group">
                 <label for="password">新しいパスワード</label>

@@ -32,6 +32,8 @@ class ResetPassword extends Mailable
     {
         return $this
             ->subject('パスワード再設定')
-            ->view('mail.password-reset'); // メールの本文用のテンプレート、password-reset.blade.phpがメールで送られる。
+            ->view('mail.password-reset', [
+                'token' => $this->token,
+            ]); // メールの本文用のテンプレート、password-reset.blade.phpがメールで送られる。
     }
 }
