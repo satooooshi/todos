@@ -39,3 +39,5 @@ Route::group(['middleware' => 'auth'], function() {
 // added automatically by laravel/ui
 // alias in app.php
 Auth::routes();
+
+}
